@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Faça sua encomenda de sorvete caseiro: escolha o sabor, o tamanho, a quantidade e a data de entrega.">
+  <title>Sorveteria Caseira | Encomendas</title>
+  <link rel="icon" type="image/svg+xml" href="logo.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="logo.svg" alt="" width="44" height="44">
+        <span class="brand-text">Sorveteria <strong>Caseira</strong></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span class="sr-only">Abrir ou fechar o menu</span>
+        <span aria-hidden="true">&#9776;</span>
+      </button>
+      <nav id="menu-principal" class="main-nav" aria-label="Menu principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sabores.html">Sabores</a></li>
+          <li><a href="encomendas.html" aria-current="page">Encomendas</a></li>
+          <li><a href="pedidos.html">Pedidos</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-title">
+      <div class="container">
+        <h1>Faça sua encomenda</h1>
+        <p>Preencha os dados abaixo. Os campos com asterisco (*) são obrigatórios.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Formulário de encomenda">
+      <div class="container">
+        <form id="form-encomenda" class="form-card">
+          <div class="form-grid">
+
+            <div class="field">
+              <label for="nome">Nome completo *</label>
+              <input type="text" id="nome" name="nome" required minlength="3" maxlength="80" autocomplete="name" placeholder="Ex.: Maria da Silva">
+            </div>
+
+            <div class="field">
+              <label for="telefone">Telefone / WhatsApp *</label>
+              <input type="tel" id="telefone" name="telefone" required pattern="[0-9()\s\-+]{10,18}" title="Digite o telefone com DDD, por exemplo (83) 90000-0000" autocomplete="tel" placeholder="(83) 90000-0000">
+            </div>
+
+            <div class="field">
+              <label for="email">E-mail <span class="hint">(opcional)</span></label>
+              <input type="email" id="email" name="email" autocomplete="email" placeholder="voce@email.com">
+            </div>
+
+            <div class="field">
+              <label for="sabor">Sabor *</label>
+              <select id="sabor" name="sabor" required>
+                <option value="">Selecione um sabor</option>
+                <optgroup label="Cremosos">
+                  <option>Chocolate belga</option>
+                  <option>Ninho com Nutella</option>
+                  <option>Coco queimado</option>
+                  <option>Doce de leite</option>
+                </optgroup>
+                <optgroup label="Frutas">
+                  <option>Morango</option>
+                  <option>Maracujá</option>
+                  <option>Limão siciliano</option>
+                  <option>Abacaxi com hortelã</option>
+                </optgroup>
+              </select>
+            </div>
+
+            <fieldset class="field-full">
+              <legend>Tamanho *</legend>
+              <div class="option-list">
+                <label class="option">
+                  <input type="radio" name="tamanho" value="Picolé" data-preco="5" required>
+                  Picolé &mdash; R$ 5,00
+                </label>
+                <label class="option">
+                  <input type="radio" name="tamanho" value="Pote 300 ml" data-preco="12" checked>
+                  Pote 300 ml &mdash; R$ 12,00
+                </label>
+                <label class="option">
+                  <input type="radio" name="tamanho" value="Pote 500 ml" data-preco="18">
+                  Pote 500 ml &mdash; R$ 18,00
+                </label>
+                <label class="option">
+                  <input type="radio" name="tamanho" value="Pote 1 L" data-preco="30">
+                  Pote 1 L &mdash; R$ 30,00
+                </label>
+              </div>
+            </fieldset>
+
+            <div class="field">
+              <label for="quantidade">Quantidade *</label>
+              <input type="number" id="quantidade" name="quantidade" required min="1" max="50" value="1">
+            </div>
+
+            <div class="field">
+              <label for="entrega">Data de entrega ou retirada *</label>
+              <input type="date" id="entrega" name="entrega" required>
+            </div>
+
+            <div class="field">
+              <label for="pagamento">Forma de pagamento *</label>
+              <select id="pagamento" name="pagamento" required>
+                <option value="">Selecione</option>
+                <option>Pix</option>
+                <option>Dinheiro</option>
+                <option>Cartão na entrega</option>
+              </select>
+            </div>
+
+            <div class="field field-full">
+              <label for="observacoes">Observações <span class="hint">(opcional)</span></label>
+              <textarea id="observacoes" name="observacoes" maxlength="300" placeholder="Ex.: sem amendoim, entregar após as 15h..."></textarea>
+            </div>
+
+            <div class="field-full total-box">
+              <span>Total estimado</span>
+              <output id="total" for="quantidade">R$ 12,00</output>
+            </div>
+
+            <label class="check field-full" for="confirmo">
+              <input type="checkbox" id="confirmo" name="confirmo" required>
+              Confirmo que os dados informados estão corretos. *
+            </label>
+
+          </div>
+
+          <div class="btn-group btn-group-spaced">
+            <button type="submit" class="btn btn-primary">Enviar encomenda</button>
+            <button type="reset" class="btn btn-outline">Limpar</button>
+          </div>
+
+          <div id="mensagem-encomenda" class="alert" role="status" hidden></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="ano">2026</span> Sorveteria Caseira. Feito em casa, com carinho.</p>
+      <p>Encomendas e retirada com hora marcada.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

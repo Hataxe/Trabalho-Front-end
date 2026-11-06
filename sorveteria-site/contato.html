@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Fale com a Sorveteria Caseira: tire dúvidas, envie sugestões ou combine detalhes da sua encomenda.">
+  <title>Sorveteria Caseira | Contato</title>
+  <link rel="icon" type="image/svg+xml" href="logo.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="logo.svg" alt="" width="44" height="44">
+        <span class="brand-text">Sorveteria <strong>Caseira</strong></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span class="sr-only">Abrir ou fechar o menu</span>
+        <span aria-hidden="true">&#9776;</span>
+      </button>
+      <nav id="menu-principal" class="main-nav" aria-label="Menu principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sabores.html">Sabores</a></li>
+          <li><a href="encomendas.html">Encomendas</a></li>
+          <li><a href="pedidos.html">Pedidos</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="contato.html" aria-current="page">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-title">
+      <div class="container">
+        <h1>Fale com a gente</h1>
+        <p>Dúvidas, sugestões ou elogios? Mande uma mensagem.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Formulário de contato e informações">
+      <div class="container two-col">
+
+        <form id="form-contato" class="form-card form-card-wide">
+          <div class="form-grid form-grid-single">
+            <div class="field">
+              <label for="c-nome">Nome *</label>
+              <input type="text" id="c-nome" name="nome" required minlength="3" maxlength="80" autocomplete="name">
+            </div>
+
+            <div class="field">
+              <label for="c-email">E-mail *</label>
+              <input type="email" id="c-email" name="email" required autocomplete="email">
+            </div>
+
+            <div class="field">
+              <label for="c-assunto">Assunto *</label>
+              <select id="c-assunto" name="assunto" required>
+                <option value="">Selecione</option>
+                <option>Dúvida sobre sabores</option>
+                <option>Encomenda para evento</option>
+                <option>Sugestão</option>
+                <option>Elogio ou reclamação</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="c-mensagem">Mensagem *</label>
+              <textarea id="c-mensagem" name="mensagem" required minlength="10" maxlength="500"></textarea>
+            </div>
+          </div>
+
+          <div class="btn-group btn-group-spaced">
+            <button type="submit" class="btn btn-primary">Enviar mensagem</button>
+          </div>
+
+          <div id="mensagem-contato" class="alert" role="status" hidden></div>
+        </form>
+
+        <aside class="card" aria-labelledby="titulo-canais">
+          <h2 id="titulo-canais">Canais de atendimento</h2>
+          <ul class="info-list">
+            <li><strong>WhatsApp:</strong> (83) 90000-0000</li>
+            <li><strong>E-mail:</strong> contato@sorveteriacaseira.example</li>
+            <li><strong>Horário:</strong> terça a domingo, das 13h às 19h</li>
+            <li><strong>Retirada:</strong> mediante agendamento</li>
+          </ul>
+          <p class="hint">Os dados de contato acima são de exemplo.</p>
+        </aside>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="ano">2026</span> Sorveteria Caseira. Feito em casa, com carinho.</p>
+      <p>Encomendas e retirada com hora marcada.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

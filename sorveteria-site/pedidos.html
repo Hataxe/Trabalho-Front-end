@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Painel de pedidos da Sorveteria Caseira: acompanhe e atualize o status das encomendas.">
+  <title>Sorveteria Caseira | Pedidos</title>
+  <link rel="icon" type="image/svg+xml" href="logo.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="logo.svg" alt="" width="44" height="44">
+        <span class="brand-text">Sorveteria <strong>Caseira</strong></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span class="sr-only">Abrir ou fechar o menu</span>
+        <span aria-hidden="true">&#9776;</span>
+      </button>
+      <nav id="menu-principal" class="main-nav" aria-label="Menu principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sabores.html">Sabores</a></li>
+          <li><a href="encomendas.html">Encomendas</a></li>
+          <li><a href="pedidos.html" aria-current="page">Pedidos</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-title">
+      <div class="container">
+        <h1>Painel de pedidos</h1>
+        <p>Acompanhe as encomendas recebidas e atualize o status de cada uma.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Lista de pedidos">
+      <div class="container">
+
+        <div class="stats">
+          <div class="stat">
+            <span class="stat-label">Pedidos</span>
+            <span class="stat-value" id="resumo-total">0</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">Em aberto</span>
+            <span class="stat-value" id="resumo-abertos">0</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">Valor total</span>
+            <span class="stat-value" id="resumo-valor">R$ 0,00</span>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <caption>Encomendas recebidas</caption>
+            <thead>
+              <tr>
+                <th scope="col">Entrega</th>
+                <th scope="col">Cliente</th>
+                <th scope="col">Pedido</th>
+                <th scope="col" class="col-num">Total</th>
+                <th scope="col">Status</th>
+                <th scope="col"><span class="sr-only">Ações</span></th>
+              </tr>
+            </thead>
+            <tbody id="lista-pedidos"></tbody>
+          </table>
+          <div id="sem-pedidos" class="empty-state" hidden>
+            <p>Nenhum pedido por aqui ainda.</p>
+            <a class="btn btn-primary" href="encomendas.html">Fazer uma encomenda</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="ano">2026</span> Sorveteria Caseira. Feito em casa, com carinho.</p>
+      <p>Encomendas e retirada com hora marcada.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

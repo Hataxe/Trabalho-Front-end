@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Conheça a história da Sorveteria Caseira e como nossos sorvetes são feitos.">
+  <title>Sorveteria Caseira | Sobre nós</title>
+  <link rel="icon" type="image/svg+xml" href="logo.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="logo.svg" alt="" width="44" height="44">
+        <span class="brand-text">Sorveteria <strong>Caseira</strong></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span class="sr-only">Abrir ou fechar o menu</span>
+        <span aria-hidden="true">&#9776;</span>
+      </button>
+      <nav id="menu-principal" class="main-nav" aria-label="Menu principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sabores.html">Sabores</a></li>
+          <li><a href="encomendas.html">Encomendas</a></li>
+          <li><a href="pedidos.html">Pedidos</a></li>
+          <li><a href="sobre.html" aria-current="page">Sobre</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-title">
+      <div class="container">
+        <h1>Sobre a Sorveteria Caseira</h1>
+        <p>Uma pequena produção familiar, com paixão por sorvete bem feito.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="titulo-historia">
+      <div class="container two-col">
+        <article>
+          <h2 id="titulo-historia">Nossa história</h2>
+          <p>Tudo começou na cozinha de casa, com receitas simples e o desejo de levar para a mesa um sorvete como o de antigamente: cremoso, com sabor de fruta de verdade e sem pressa.</p>
+          <p>Hoje seguimos produzindo em pequenos lotes. Assim, cada pote sai fresquinho e com o cuidado de quem faz para a própria família.</p>
+          <a class="btn btn-primary" href="encomendas.html">Experimente</a>
+        </article>
+
+        <aside class="card" aria-labelledby="titulo-valores">
+          <h2 id="titulo-valores">Nossos valores</h2>
+          <ul class="info-list">
+            <li><strong>Qualidade:</strong> ingredientes selecionados.</li>
+            <li><strong>Carinho:</strong> receitas feitas à mão.</li>
+            <li><strong>Transparência:</strong> você sabe o que está comendo.</li>
+            <li><strong>Proximidade:</strong> atendimento direto, sem intermediários.</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section section-alt" aria-labelledby="titulo-preparo">
+      <div class="container">
+        <h2 id="titulo-preparo">Como preparamos</h2>
+        <ol class="steps">
+          <li>Selecionamos as frutas e os ingredientes do dia.</li>
+          <li>Preparamos a base e misturamos com os sabores.</li>
+          <li>Deixamos a mistura descansar e a batemos até ficar cremosa.</li>
+          <li>Congelamos, embalamos e guardamos com cuidado até a entrega.</li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="ano">2026</span> Sorveteria Caseira. Feito em casa, com carinho.</p>
+      <p>Encomendas e retirada com hora marcada.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

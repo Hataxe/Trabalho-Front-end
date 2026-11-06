@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Conheça os sabores de sorvete caseiro da Sorveteria Caseira e a tabela de tamanhos e preços.">
+  <title>Sorveteria Caseira | Sabores</title>
+  <link rel="icon" type="image/svg+xml" href="logo.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="logo.svg" alt="" width="44" height="44">
+        <span class="brand-text">Sorveteria <strong>Caseira</strong></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span class="sr-only">Abrir ou fechar o menu</span>
+        <span aria-hidden="true">&#9776;</span>
+      </button>
+      <nav id="menu-principal" class="main-nav" aria-label="Menu principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sabores.html" aria-current="page">Sabores</a></li>
+          <li><a href="encomendas.html">Encomendas</a></li>
+          <li><a href="pedidos.html">Pedidos</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-title">
+      <div class="container">
+        <h1>Nossos sabores</h1>
+        <p>Todos os sabores estão disponíveis em picolé e em potes de diferentes tamanhos.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="titulo-cremosos">
+      <div class="container">
+        <h2 id="titulo-cremosos">Cremosos</h2>
+        <div class="grid">
+          <article class="card flavor-card">
+            <span class="tag">Cremoso</span>
+            <h3><span aria-hidden="true">🍫</span> Chocolate belga</h3>
+            <p>Cacau de verdade, intenso e aveludado.</p>
+          </article>
+          <article class="card flavor-card">
+            <span class="tag">Cremoso</span>
+            <h3><span aria-hidden="true">🥛</span> Ninho com Nutella</h3>
+            <p>Leite em pó cremoso com camadas de creme de avelã.</p>
+          </article>
+          <article class="card flavor-card">
+            <span class="tag">Cremoso</span>
+            <h3><span aria-hidden="true">🥥</span> Coco queimado</h3>
+            <p>Coco fresco com calda caramelizada e lascas douradas.</p>
+          </article>
+          <article class="card flavor-card">
+            <span class="tag">Cremoso</span>
+            <h3><span aria-hidden="true">🍮</span> Doce de leite</h3>
+            <p>Doce de leite de panela, feito aqui em casa.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" aria-labelledby="titulo-frutas">
+      <div class="container">
+        <h2 id="titulo-frutas">Frutas</h2>
+        <div class="grid">
+          <article class="card flavor-card">
+            <span class="tag tag-fruta">Fruta</span>
+            <h3><span aria-hidden="true">🍓</span> Morango</h3>
+            <p>Com pedacinhos da fruta e um toque de leite condensado.</p>
+          </article>
+          <article class="card flavor-card">
+            <span class="tag tag-fruta">Fruta</span>
+            <h3><span aria-hidden="true">🥭</span> Maracujá</h3>
+            <p>Refrescante, levemente azedinho e bem perfumado.</p>
+          </article>
+          <article class="card flavor-card">
+            <span class="tag tag-fruta">Fruta</span>
+            <h3><span aria-hidden="true">🍋</span> Limão siciliano</h3>
+            <p>Cítrico e suave, ótimo para fechar uma refeição.</p>
+          </article>
+          <article class="card flavor-card">
+            <span class="tag tag-fruta">Fruta</span>
+            <h3><span aria-hidden="true">🍍</span> Abacaxi com hortelã</h3>
+            <p>Doce na medida certa, com frescor de hortelã.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="titulo-precos">
+      <div class="container">
+        <h2 id="titulo-precos">Tamanhos e preços</h2>
+        <div class="table-wrap">
+          <table>
+            <caption>Valores por unidade (qualquer sabor)</caption>
+            <thead>
+              <tr>
+                <th scope="col">Tamanho</th>
+                <th scope="col">Indicado para</th>
+                <th scope="col" class="col-num">Preço</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Picolé</th>
+                <td>Um lanche individual</td>
+                <td class="col-num">R$ 5,00</td>
+              </tr>
+              <tr>
+                <th scope="row">Pote 300 ml</th>
+                <td>1 a 2 pessoas</td>
+                <td class="col-num">R$ 12,00</td>
+              </tr>
+              <tr>
+                <th scope="row">Pote 500 ml</th>
+                <td>2 a 3 pessoas</td>
+                <td class="col-num">R$ 18,00</td>
+              </tr>
+              <tr>
+                <th scope="row">Pote 1 L</th>
+                <td>Família ou festa</td>
+                <td class="col-num">R$ 30,00</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="section-subtitle">
+          Gostou? <a href="encomendas.html">Faça sua encomenda</a>.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="ano">2026</span> Sorveteria Caseira. Feito em casa, com carinho.</p>
+      <p>Encomendas e retirada com hora marcada.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
