@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Agendamento online da Clínica Sorriso Leve.">
+  <title>Clínica Sorriso Leve | Agendamento</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topo">
+    <div class="container topo-conteudo">
+      <a class="marca" href="#" aria-label="Clínica Sorriso Leve - início">
+        <span class="marca-icone">＋</span>
+        <span>Clínica <strong>Sorriso Leve</strong></span>
+      </a>
+      <nav aria-label="Navegação principal">
+        <a href="#sobre">A clínica</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#agendamento" class="nav-botao">Agendar consulta</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-conteudo">
+        <div class="hero-texto">
+          <span class="etiqueta">Cuidado com o seu sorriso</span>
+          <h1>Seu sorriso merece<br><span>um cuidado especial.</span></h1>
+          <p>Atendimento odontológico acolhedor, com atenção a cada detalhe. Escolha um horário e agende sua consulta.</p>
+          <a class="botao botao-principal" href="#agendamento">Agendar agora</a>
+        </div>
+        <div class="hero-card" aria-label="Mensagem da clínica">
+          <div class="icone-dente">✧</div>
+          <p class="frase">“Um sorriso saudável começa com cuidado.”</p>
+          <span>Clínica Sorriso Leve</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao sobre" id="sobre">
+      <div class="container sobre-conteudo">
+        <div>
+          <span class="etiqueta">Bem-vindo(a)</span>
+          <h2>Cuidar da saúde bucal pode ser simples.</h2>
+        </div>
+        <p>Na Clínica Sorriso Leve, nosso objetivo é oferecer um atendimento atencioso e tranquilo. Agende sua avaliação e cuide do seu sorriso com a gente.</p>
+      </div>
+    </section>
+
+    <section class="secao servicos" id="servicos">
+      <div class="container">
+        <div class="cabecalho-secao">
+          <span class="etiqueta">O que oferecemos</span>
+          <h2>Nossos serviços</h2>
+          <p>Atendimentos para acompanhar e cuidar da sua saúde bucal.</p>
+        </div>
+        <div class="servicos-grid">
+          <article class="servico">
+            <span class="servico-icone">01</span>
+            <h3>Limpeza</h3>
+            <p>Prevenção e remoção de placa e tártaro.</p>
+          </article>
+          <article class="servico">
+            <span class="servico-icone">02</span>
+            <h3>Avaliação</h3>
+            <p>Acompanhamento e orientação odontológica.</p>
+          </article>
+          <article class="servico">
+            <span class="servico-icone">03</span>
+            <h3>Clareamento</h3>
+            <p>Cuidados estéticos para o seu sorriso.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao agendamento" id="agendamento">
+      <div class="container agendamento-grid">
+        <div class="agendamento-info">
+          <span class="etiqueta">Marque sua consulta</span>
+          <h2>Agende seu horário.</h2>
+          <p>Preencha os dados ao lado. Você poderá conferir os detalhes antes de confirmar.</p>
+          <div class="info-linha"><span>⌖</span><div><strong>Endereço</strong><small>Rua Exemplo, 123 — Centro</small></div></div>
+          <div class="info-linha"><span>◷</span><div><strong>Horário de atendimento</strong><small>Segunda a sexta, das 8h às 18h</small></div></div>
+          <p class="aviso">Este é um projeto demonstrativo. O agendamento fica salvo somente neste navegador.</p>
+        </div>
+
+        <form class="formulario" id="form-agendamento">
+          <h3>Solicitar agendamento</h3>
+          <div class="campo">
+            <label for="nome">Nome completo</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required minlength="3">
+          </div>
+          <div class="campos-duplos">
+            <div class="campo">
+              <label for="telefone">Telefone</label>
+              <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" required>
+            </div>
+            <div class="campo">
+              <label for="servico">Serviço</label>
+              <select id="servico" name="servico" required>
+                <option value="">Selecione</option>
+                <option>Limpeza</option>
+                <option>Avaliação</option>
+                <option>Clareamento</option>
+              </select>
+            </div>
+          </div>
+          <div class="campos-duplos">
+            <div class="campo">
+              <label for="data">Data</label>
+              <input type="date" id="data" name="data" required>
+            </div>
+            <div class="campo">
+              <label for="horario">Horário</label>
+              <select id="horario" name="horario" required>
+                <option value="">Escolha a data primeiro</option>
+              </select>
+            </div>
+          </div>
+          <div class="campo">
+            <label for="observacoes">Observações <span>(opcional)</span></label>
+            <textarea id="observacoes" name="observacoes" rows="3" placeholder="Conte se há algo que devemos saber"></textarea>
+          </div>
+          <button class="botao botao-principal botao-largo" type="submit">Confirmar agendamento</button>
+          <p class="mensagem" id="mensagem" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="secao meus-agendamentos">
+      <div class="container">
+        <div class="cabecalho-secao">
+          <span class="etiqueta">Seus horários</span>
+          <h2>Agendamentos realizados</h2>
+          <p>Os registros feitos neste navegador aparecem aqui.</p>
+        </div>
+        <div id="lista-agendamentos" class="lista-agendamentos">
+          <p class="vazio">Nenhum agendamento por enquanto.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container rodape">
+      <a class="marca" href="#"><span class="marca-icone">＋</span><span>Clínica <strong>Sorriso Leve</strong></span></a>
+      <p>© 2026 Clínica Sorriso Leve. Projeto acadêmico demonstrativo.</p>
+    </div>
+  </footer>
+</body>
+</html>
